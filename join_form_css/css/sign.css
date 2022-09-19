@@ -1,0 +1,270 @@
+header .container{
+    justify-content: center;
+}
+
+.banner form{    
+    /* width: 350px; */
+    width: 412px;
+    margin:calc(var(--base_unit)*3) auto;
+    position: relative;
+}
+.feedback{
+    position: absolute;
+    top: 0;
+    left:calc(100% + 40px);
+    background: #fff;
+    border-radius:2px;
+    padding: 20px;
+    width: 262px;
+    box-sizing: border-box;
+}
+.feedback:after{
+    content:'';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-width:10px;
+    border-style:solid;
+    border-color:transparent #fff transparent transparent;
+    right: 100%;
+    top:20px;
+}
+legend {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+.banner form .field{
+    /* margin-bottom: 10px; */
+    margin-bottom: 40px;
+    display: flex;
+    gap:10px;
+    border: 1px solid #d2d2d2;
+    position: relative;
+}
+.banner form .field:not(.gender):not(.interest) label {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;   
+}
+.banner form .field:nth-of-type(5), .banner form .field:nth-of-type(6) {
+    margin-bottom: 18px;
+}
+.banner form .field.gender, .banner form .field.interest {
+    justify-content: center;
+    border: none;
+}
+.banner form .field input{
+    flex:1;
+    border:none;
+    outline: none;
+    background:none;
+}
+.banner form .field.success {
+    border-color: #2ecc71;
+    border-width: 2px;
+}
+.banner form .field.success span {
+    visibility: visible;
+    color: #2ecc71;
+}
+.banner form .field.error {
+    border-color: #e74c3c;
+    border-width: 2px;
+}
+.banner form .field.error span {
+    visibility: visible;
+    color: #e74c3c;
+}
+.banner form .field input[type='radio'], .banner form .field input[type='checkbox'] {
+    flex:none;
+}
+.banner form .field select {
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    border: none;
+    width: 100%;
+    background: none;
+    position: relative;
+    color: var(--light_txt);
+}
+.banner form .field select::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-color: #0068FF transparent transparent transparent;
+    position: absolute;
+    top: 16px;
+    right: 10px;
+}
+.banner form .field select option[value=""][disabled] {
+    display: none;
+}
+.banner ul li {
+    color: var(--light_txt);
+    line-height: 1.45;
+    padding-bottom: 10px;
+    font-size:14px;
+}
+.banner ul li span {
+    transform: translateY(3px);
+    font-size: 16px;
+    margin-right: 4px;
+}
+.banner form .field span {
+    line-height: 54px;
+    visibility: hidden;
+}
+.banner form .field small {
+    /* position: absolute;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    overflow: hidden;     */
+    position: absolute;
+    bottom: -45px;
+    left: 22px;
+    font-size: 13px;
+    visibility: hidden;
+}
+.banner form .field.success small{
+    visibility: visible;
+    color: #2ecc71;
+}
+.banner form .field.error small{
+    visibility: visible;
+    color: #e74c3c;
+}
+.banner .button{
+    width: 100%;
+    background: none;
+    border-radius: 10px;
+    height: calc(var(--base_unit)*2);
+    text-align: center;
+    line-height: calc(var(--base_unit)*2);
+    color:#0068FF;
+    text-transform: uppercase;
+    /* font-weight: bold; */
+    border:1px solid #0068FF;
+    font-size: 18px;
+    line-height: 18px;
+}
+.banner hr {
+    margin: 32px 0 32px;
+}
+/* .forget{
+    text-align: center;
+}
+footer > div {
+    text-align: center;
+}
+footer .content_desc {
+    margin-bottom: calc(var(--base_unit)*2);
+} */
+.confirm {
+    text-align: center;
+}
+.confirm h3 {
+    font-size: 24px;
+    color: var(--primary-c);
+    margin-bottom: 20px;
+}
+.confirm h3 span {
+    transform: translateY(3px);
+    margin-right: 7px;
+    font-size: 26px;
+}
+.confirm h4 {
+    color: var(--body_txt);
+    line-height: 1.8;
+
+}
+.confirm p {
+    color: var(--light_txt);
+    line-height: 1.6;
+}
+.confirm table {
+    margin: 0 auto;
+    background-color: #fff;
+}
+table > thead > tr > th {
+    font-weight: 400;
+    color: #757575;
+    vertical-align: bottom;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+table > thead > tr > th, table > tbody > tr > th, table > tfoot > tr > th, table > thead > tr > td, table > tbody > tr > td, table > tfoot > tr > td {
+    text-align: left;
+    padding: 1.6rem;
+    vertical-align: top;
+    border-top: 0;
+}
+table td button {
+    border: 1px solid #0068FF;
+    width: 100%;
+    background: none;
+    border-radius: 10px;
+    text-align: center;
+    color: #0068FF;
+    text-transform: uppercase;
+    padding: 6px;
+    transform: translateY(-6px);
+}
+.field textarea {
+    width: 100%;
+    border: none;
+    appearance: none;
+    outline: none;
+    resize: none;
+    padding: 12px 0;
+}
+.consent h4 {
+    line-height: 2.5rem;
+    color: var(--primary-c);
+}
+.consent h5 {
+    color: var(--light_txt);
+    margin-left: 8px;
+}
+/* .consent h6 {
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    position: absolute;
+    right: 0;
+    transform: translateY(-12px);
+    cursor: pointer;
+    color: var(--light_txt);
+} */
+.consent > div {
+    padding: 14px 0;
+}
+.consent > div > div {
+    display: flex;
+}
+.confirm .wrapper {
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+}
+.confirm button {
+    border: 1px solid #0068FF;
+    background: none;
+    border-radius: 10px;
+    text-align: center;
+    color: #0068FF;
+    text-transform: uppercase;
+    padding: 6px;
+    transform: translateY(-6px);
+   
+}
+.confirm table ~ button {
+    position: absolute;
+    top: -25px;
+    right: 50px; 
+}
